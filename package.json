@@ -2,6 +2,13 @@
   "name": "easy_cal",
   "version": "0.1.0",
   "private": true,
+  "description": "Simple calculator app using react",
+  "author": "ysskrishna",
+  "license": "MIT",
+  "keywords":[
+    "react",
+    "calculator"
+  ],
   "dependencies": {
     "font-awesome": "^4.7.0",
     "react": "^16.3.2",

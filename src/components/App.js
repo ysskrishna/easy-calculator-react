@@ -151,41 +151,42 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <pre>{JSON.stringify(this.state,null,2)}</pre>
+        <h1 className='text-center my-5'>Easy Calculator</h1>
+        {/* <pre>{JSON.stringify(this.state,null,2)}</pre> */}
       <form>
           <div className = "row">
             <input type="text" className = "col-sm-2 display_oper text-center" value = {this.state.operator} />
             <input type="text" className = "col-sm-10 display text-right" value = {this.state.dispValue} />
           </div>
           <div className = "row">
-            <button type="button" className = "btn btn-outline-danger col-sm-3" onClick={() => this.clearDisplay()}>C</button>
-            <button type="button" className = "btn btn-outline-danger col-sm-3" onClick={()=>this.clearLastDigit()}><i className="fas fa-long-arrow-alt-left"></i></button>
-            <button type="button" className = "btn btn-outline-warning col-sm-3" onClick={() => this.toggleSign()}><i className="fa fa-plus"></i>/<i className="fa fa-minus"></i></button>
-            <button type="button" className = "btn btn-outline-warning col-sm-3" onClick={() => this.inputPercent()}><i className="fas fa-percent"></i></button>
+            <button type="button" className = "btn btn-outline-danger border border-black col-sm-3" onClick={() => this.clearDisplay()}>C</button>
+            <button type="button" className = "btn btn-outline-danger border border-black col-sm-3" onClick={()=>this.clearLastDigit()}><i className="fas fa-long-arrow-alt-left"></i></button>
+            <button type="button" className = "btn btn-outline-warning border border-black col-sm-3" onClick={() => this.toggleSign()}><i className="fa fa-plus"></i>/<i className="fa fa-minus"></i></button>
+            <button type="button" className = "btn btn-outline-warning border border-black col-sm-3" onClick={() => this.inputPercent()}><i className="fas fa-percent"></i></button>
           </div>
           <div className = "row">
-            <button type="button" className = "btn btn-outline-primary col-sm-3" onClick={()=>this.inputDigit("1")}>1</button>
-            <button type="button" className = "btn btn-outline-primary col-sm-3" onClick={()=>this.inputDigit("2")}>2</button>
-            <button type="button" className = "btn btn-outline-primary col-sm-3" onClick={()=>this.inputDigit("3")}>3</button>
-            <button type="button" className = "btn btn-outline-warning col-sm-3" onClick={()=>this.add()}><i className="fa fa-plus"></i></button>
+            <button type="button" className = "btn btn-outline-primary border border-black col-sm-3" onClick={()=>this.inputDigit("1")}>1</button>
+            <button type="button" className = "btn btn-outline-primary border border-black col-sm-3" onClick={()=>this.inputDigit("2")}>2</button>
+            <button type="button" className = "btn btn-outline-primary border border-black col-sm-3" onClick={()=>this.inputDigit("3")}>3</button>
+            <button type="button" className = "btn btn-outline-warning border border-black col-sm-3" onClick={()=>this.add()}><i className="fa fa-plus"></i></button>
           </div>
           <div className = "row">
-            <button type="button" className = "btn btn-outline-primary col-sm-3" onClick={()=>this.inputDigit("4")}>4</button>
-            <button type="button" className = "btn btn-outline-primary col-sm-3" onClick={()=>this.inputDigit("5")}>5</button>
-            <button type="button" className = "btn btn-outline-primary col-sm-3" onClick={()=>this.inputDigit("6")}>6</button>
-            <button type="button" className = "btn btn-outline-warning col-sm-3" onClick={()=>this.substract()}><i className="fa fa-minus"></i></button>
+            <button type="button" className = "btn btn-outline-primary border border-black col-sm-3" onClick={()=>this.inputDigit("4")}>4</button>
+            <button type="button" className = "btn btn-outline-primary border border-black col-sm-3" onClick={()=>this.inputDigit("5")}>5</button>
+            <button type="button" className = "btn btn-outline-primary border border-black col-sm-3" onClick={()=>this.inputDigit("6")}>6</button>
+            <button type="button" className = "btn btn-outline-warning border border-black col-sm-3" onClick={()=>this.substract()}><i className="fa fa-minus"></i></button>
           </div>
           <div className = "row">
-            <button type="button" className = "btn btn-outline-primary col-sm-3" onClick={()=>this.inputDigit("7")}>7</button>
-            <button type="button" className = "btn btn-outline-primary col-sm-3" onClick={()=>this.inputDigit("8")}>8</button>
-            <button type="button" className = "btn btn-outline-primary col-sm-3" onClick={()=>this.inputDigit("9")}>9</button>
-            <button type="button" className = "btn btn-outline-warning col-sm-3" onClick={()=>this.multiply()}><i className="fa fa-asterisk"></i></button>
+            <button type="button" className = "btn btn-outline-primary border border-black col-sm-3" onClick={()=>this.inputDigit("7")}>7</button>
+            <button type="button" className = "btn btn-outline-primary border border-black col-sm-3" onClick={()=>this.inputDigit("8")}>8</button>
+            <button type="button" className = "btn btn-outline-primary border border-black col-sm-3" onClick={()=>this.inputDigit("9")}>9</button>
+            <button type="button" className = "btn btn-outline-warning border border-black col-sm-3" onClick={()=>this.multiply()}><i className="fa fa-asterisk"></i></button>
           </div>
           <div className="row">
-            <button type="button" className="btn btn-outline-warning col-sm-3" onClick={()=>this.inputDot()}><i className="fas fa-circle"></i></button>
-            <button type="button" className="btn btn-outline-primary col-sm-3" onClick={()=>this.inputDigit("0")}>0</button>
-            <button type="button" className="btn btn-outline-warning col-sm-3" onClick={()=>this.equal()}><i className="fas fa-equals"></i></button>
-            <button type="button" className="btn btn-outline-warning col-sm-3" onClick={()=>this.divide()}><i className="fas fa-divide"></i></button>
+            <button type="button" className="btn btn-outline-warning border border-black col-sm-3" onClick={()=>this.inputDot()}><i className="fas fa-circle"></i></button>
+            <button type="button" className="btn btn-outline-primary border border-black col-sm-3" onClick={()=>this.inputDigit("0")}>0</button>
+            <button type="button" className="btn btn-outline-warning border border-black col-sm-3" onClick={()=>this.equal()}><i className="fas fa-equals"></i></button>
+            <button type="button" className="btn btn-outline-warning border border-black col-sm-3" onClick={()=>this.divide()}><i className="fas fa-divide"></i></button>
           </div>
 	      </form>   
         </div>
